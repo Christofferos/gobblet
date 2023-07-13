@@ -723,11 +723,11 @@ function turnPickedUpGobblet(squareId, player, size) {
   switch (playerTurn % 2) {
     case 0:
       document.getElementById(squareId).innerHTML =
-        '<img style="width:' + size + "; height:" + size + ';" src="../images/whiteCircle.png">';
+        '<img style="width:' + size + "; height:" + size + ';" src="whiteCircle.png">';
       break;
     case 1:
       document.getElementById(squareId).innerHTML =
-        '<img style="width:' + size + "; height:" + size + ';" src="../images/blackCircle.png">';
+        '<img style="width:' + size + "; height:" + size + ';" src="blackCircle.png">';
       break;
   }
 }
@@ -739,21 +739,13 @@ function turn(squareId, player, size) {
       let movePiece = new Audio("../../soundeffects/gobbletMoved.mp3");
       movePiece.play();
       document.getElementById(squareId).innerHTML =
-        '<img style="width:' +
-        size +
-        "; height:" +
-        size +
-        ';" src="../../images/whiteCircle.png">';
+        '<img style="width:' + size + "; height:" + size + ';" src="whiteCircle.png">';
       break;
     case 1:
       let movePiece2 = new Audio("../../soundeffects/gobbletMoved2.mp3");
       movePiece2.play();
       document.getElementById(squareId).innerHTML =
-        '<img style="width:' +
-        size +
-        "; height:" +
-        size +
-        ';" src="../../images/blackCircle.png">';
+        '<img style="width:' + size + "; height:" + size + ';" src="blackCircle.png">';
       break;
   }
   let gameWon = checkWin(origBoard, player);
